@@ -6,5 +6,10 @@ public class Test {
     public static void main(String[] args) {
         ViaApplicationContext applicationContext = new ViaApplicationContext(AppConfig.class);
         UserService userService = (UserService) applicationContext.getBean("userService");
+
+        BookService bookServiceImpl = (BookService) applicationContext.getBean("bookServiceImpl");
+        bookServiceImpl.test();
+
+
     }
 }
